@@ -9,4 +9,5 @@ prog: $(OBJ)
 	$(LINK) $(OBJ)
 
 alg8.o: alg8.cc alg8.h
-main.o: main.cc
+main.o: main.cc alg8.h
+

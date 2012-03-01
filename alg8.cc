@@ -16,7 +16,7 @@ NATION* create_nation(int count)
 	return n;
 }
 
-void set_man(NATION* nation, int index, char *name, int age, int gender, int year)
+void set_man(NATION* nation, int index, const char *name, int age, int gender, int year)
 {
 	if(index > -1 && index < nation->count)	{
 		strcpy(nation->men[index].name, name);	
@@ -36,10 +36,10 @@ void set_man(NATION* nation, int index, MAN* man)
 	}
 }
 
-void print_man(NATION* nation, int index, char *prefix)
+void print_man(NATION* nation, int index, const char *prefix)
 {
 	if(index > -1 && index < nation->count)
-		printf("%s:MAN[%d]: name: %s, age: %d, gender: %s, year: %d", prefix, index + 1, nation->men[index].name,
+		printf("\n%s:MAN[%d]: name: %s, age: %d, gender: %s, year: %d\n", prefix, index + 1, nation->men[index].name,
 		nation->men[index].age, nation->men[index].gender == 1 ? "male" : "female", nation->men[index].year);
 }
 
