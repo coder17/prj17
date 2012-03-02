@@ -31,3 +31,8 @@ void draw_rect(int x, int y, int w, int h)
 		printf("\n");
 	}
 }
+
+void draw_square(int x, int y, int w)
+{
+	draw_rect(x, y, w, w);
+}
