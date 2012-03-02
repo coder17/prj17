@@ -2,6 +2,7 @@
 #include "alg8.h"
 #include "lst.h"
 #include "gr.h"
+#include "pit.h"
 
 
 int main(int argc, char **argv)
@@ -30,6 +31,8 @@ int main(int argc, char **argv)
 	//draw_line(5, 5, 20);
 	//draw_rect(3, 10, 7, 12);
 	//draw_square(3, 10, 20);
+
+	func_m();
 
 	return 0;
 }
