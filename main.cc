@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "alg8.h"
 #include "lst.h"
+#include "gr.h"
 
 
 int main(int argc, char **argv)
@@ -22,6 +23,10 @@ int main(int argc, char **argv)
 	add_pupil(pl, "Kate", 9, 7665);
 	print_all_pupils(pl);
 	delete_pupil_list(pl);
+
+	draw_line(5, 5, 20);
+	draw_rect(3, 10, 7, 12);
+	draw_square(3, 10, 20);
 
 	return 0;
 }
