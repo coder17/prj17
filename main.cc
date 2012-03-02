@@ -4,11 +4,15 @@
 
 int main(int argc, char **argv)
 {
-	Plot p;
+	Plot p1;
 
-	p.set_name("Valery");
-	p.set_age(10);
-	printf("name: %s, age: %d\n", p.get_name(), p.get_age());
+	p1.set_name("Valery");
+	p1.set_age(10);
+	printf("1 name: %s, age: %d\n", p1.get_name(), p1.get_age());
+
+	Plot p2("Fred");
+	p1 = p2;
+	printf("1 name: %s, age: %d\n", p1.get_name(), p1.get_age());
 
 	return 0;
 }

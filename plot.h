@@ -22,4 +22,6 @@ public:
 
 	void set_num(int num);
 	int get_num();
+
+	Plot& operator=(Plot &right);
 };

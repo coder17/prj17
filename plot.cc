@@ -50,3 +50,12 @@ int Plot::get_num()
 	return m_num;
 }
 
+Plot& Plot::operator=(Plot &right)
+{
+	strcpy(m_name, right.m_name);
+	m_age = right.m_age;
+	m_num = right.m_num;
+
+	return *this;
+}
+
