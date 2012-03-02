@@ -14,7 +14,7 @@ PUPIL_LIST* create_pupil_list()
 	return pl;
 }
 
-void add_pupil(PUPIL_LIST* pl, const char *name, int age, int num)
+void add_pupil_tail(PUPIL_LIST* pl, const char *name, int age, int num)
 {
 	PUPIL_ITEM *pi = (PUPIL_ITEM*) malloc(sizeof(PUPIL_ITEM));
 
@@ -30,6 +30,24 @@ void add_pupil(PUPIL_LIST* pl, const char *name, int age, int num)
 
 	if(!pl->head)
 		pl->head = pi;
+}
+
+void add_pupil_head(PUPIL_LIST* pl, const char *name, int age, int num)
+{
+	PUPIL_ITEM *pi = (PUPIL_ITEM*) malloc(sizeof(PUPIL_ITEM));
+
+	strcpy(pi->data.name, name);
+	pi->data.age = age;
+	pi->data.num = num;
+	pi->next = NULL;
+	
+	if(pl->head)
+		pi->next = pl->head;	
+
+	pl->head = pi;
+
+	if(!pl->tail)
+		pl->tail = pi;
 }
 
 void print_all_pupils(PUPIL_LIST* pl)
